@@ -1,0 +1,49 @@
+{
+  "name": "node-passport-auth",
+  "version": "0.1.0",
+  "description": "Passport.js Authentication with Node/Express.js",
+  "main": "server.ts",
+  "scripts": {
+    "start": "nodemon server.ts"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "passport",
+    "authentication"
+  ],
+  "author": "movwf (movwf@github)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/dotenv-safe": "^8.1.2",
+    "@types/express-session": "^1.17.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/passport": "^1.0.7",
+    "@types/passport-google-oauth2": "^0.1.4",
+    "@types/passport-http-bearer": "^1.0.37",
+    "@types/passport-local": "^1.0.34",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.14",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "sucrase": "^3.20.3"
+  }
+}
