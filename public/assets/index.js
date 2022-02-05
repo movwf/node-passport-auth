@@ -12,7 +12,7 @@ jwtCheck.addEventListener('change', (event) => {
   const { checked } = event.target;
 
   // If JWT selected
-  if (checked) form.setAttribute('action', '/auth/jwt/login');
+  if (checked) form.setAttribute('action', '/auth/jwt2/login');
   else {
     statusBox.setAttribute('hidden', 'true');
     form.setAttribute('action', '/auth/local/login');
@@ -27,14 +27,14 @@ submitBtn.addEventListener('click', (event) => {
   }
 });
 
-submitBtn.addEventListener('click', (event) => {
+googleBtn.addEventListener('click', (event) => {
   window.location.replace('/auth/google');
 });
 
 const loginWithJWT = (user) => {
   statusBox.removeAttribute('hidden');
 
-  fetch('http://localhost:9000/auth/jwt/login', {
+  fetch('http://localhost:9000/auth/jwt2/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
