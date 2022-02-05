@@ -1,6 +1,7 @@
 require('dotenv-safe').config();
 import cors from 'cors';
 import express from 'express';
+import cookieParser from 'cookie-parser';
 
 import routes from './routes';
 
@@ -15,6 +16,7 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.use(routes);
 
