@@ -1,6 +1,6 @@
 {
   "name": "node-passport-auth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Passport.js Authentication with Node/Express.js",
   "main": "server.ts",
   "scripts": {
@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.2",
     "@types/cors": "^2.8.12",
     "@types/dotenv-safe": "^8.1.2",
     "@types/express-session": "^1.17.2",
@@ -23,6 +24,7 @@
     "@types/passport": "^1.0.7",
     "@types/passport-google-oauth2": "^0.1.4",
     "@types/passport-http-bearer": "^1.0.37",
+    "@types/passport-jwt": "^3.0.6",
     "@types/passport-local": "^1.0.34",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -34,6 +36,7 @@
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.14",
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
     "express": "^4.17.2",
@@ -43,6 +46,7 @@
     "passport": "^0.5.2",
     "passport-google-oauth2": "^0.2.0",
     "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "sucrase": "^3.20.3"
   }

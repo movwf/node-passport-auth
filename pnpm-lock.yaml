@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/bcrypt': ^5.0.0
+  '@types/cookie-parser': ^1.4.2
   '@types/cors': ^2.8.12
   '@types/dotenv-safe': ^8.1.2
   '@types/express': ^4.17.13
@@ -11,8 +12,10 @@ specifiers:
   '@types/passport': ^1.0.7
   '@types/passport-google-oauth2': ^0.1.4
   '@types/passport-http-bearer': ^1.0.37
+  '@types/passport-jwt': ^3.0.6
   '@types/passport-local': ^1.0.34
   bcrypt: ^5.0.1
+  cookie-parser: ^1.4.6
   cors: ^2.8.5
   dotenv-safe: ^8.2.0
   eslint: ^7.32.0
@@ -25,6 +28,7 @@ specifiers:
   passport: ^0.5.2
   passport-google-oauth2: ^0.2.0
   passport-http-bearer: ^1.0.1
+  passport-jwt: ^4.0.0
   passport-local: ^1.0.0
   sucrase: ^3.20.3
   ts-node: ^10.4.0
@@ -43,11 +47,13 @@ dependencies:
   passport: 0.5.2
   passport-google-oauth2: 0.2.0
   passport-http-bearer: 1.0.1
+  passport-jwt: 4.0.0
   passport-local: 1.0.0
   sucrase: 3.20.3
 
 devDependencies:
   '@types/bcrypt': 5.0.0
+  '@types/cookie-parser': 1.4.2
   '@types/cors': 2.8.12
   '@types/dotenv-safe': 8.1.2
   '@types/express-session': 1.17.4
@@ -55,7 +61,9 @@ devDependencies:
   '@types/passport': 1.0.7
   '@types/passport-google-oauth2': 0.1.4
   '@types/passport-http-bearer': 1.0.37
+  '@types/passport-jwt': 3.0.6
   '@types/passport-local': 1.0.34
+  cookie-parser: 1.4.6
   eslint: 7.32.0
   eslint-config-airbnb-base: 15.0.0_157002f9dff1b62f2b20650d7e8bf1eb
   eslint-plugin-import: 2.25.4_eslint@7.32.0
@@ -201,6 +209,12 @@ packages:
     resolution: {integrity: sha512-0mPF08jn9zYI0n0Q/Pnz7C4kThdSt+6LD4amsrYDDpgBfrVWa3TcCOxKX1zkGgYniGagRv8heN2cbh+CAn+uuQ==}
     dev: true
 
+  /@types/cookie-parser/1.4.2:
+    resolution: {integrity: sha512-uwcY8m6SDQqciHsqcKDGbo10GdasYsPCYkH3hVegj9qAah6pX5HivOnOuI3WYmyQMnOATV39zv/Ybs0bC/6iVg==}
+    dependencies:
+      '@types/express': 4.17.13
+    dev: true
+
   /@types/cookies/0.7.7:
     resolution: {integrity: sha512-h7BcvPUogWbKCzBR2lY4oqaZbO3jXZksexYJVFvkrFeLgbZjQkU4x8pRq6eg2MHXQhY0McQdqmmsxRWlVAHooA==}
     dependencies:
@@ -300,6 +314,14 @@ packages:
       '@types/express': 4.17.13
       '@types/koa': 2.13.4
       '@types/passport': 1.0.7
+    dev: true
+
+  /@types/passport-jwt/3.0.6:
+    resolution: {integrity: sha512-cmAAMIRTaEwpqxlrZyiEY9kdibk94gP5KTF8AT1Ra4rWNZYHNMreqhKUEeC5WJtuN5SJZjPQmV+XO2P5PlnvNQ==}
+    dependencies:
+      '@types/express': 4.17.13
+      '@types/jsonwebtoken': 8.5.8
+      '@types/passport-strategy': 0.2.35
     dev: true
 
   /@types/passport-local/1.0.34:
@@ -712,14 +734,20 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /cookie-parser/1.4.6:
+    resolution: {integrity: sha512-z3IzaNjdwUC2olLIB5/ITd0/setiaFMLYiZJle7xg5Fe9KWAceil7xszYfHHBtDFYLSgJduS2Ty0P1uJdPDJeA==}
+    engines: {node: '>= 0.8.0'}
+    dependencies:
+      cookie: 0.4.1
+      cookie-signature: 1.0.6
+    dev: true
+
   /cookie-signature/1.0.6:
     resolution: {integrity: sha1-4wOogrNCzD7oylE6eZmXNNqzriw=}
-    dev: false
 
   /cookie/0.4.1:
     resolution: {integrity: sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==}
     engines: {node: '>= 0.6'}
-    dev: false
 
   /cors/2.8.5:
     resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
@@ -2086,6 +2114,13 @@ packages:
     resolution: {integrity: sha1-FHRp6jZp4qhMYWfvmdu3fh8AmKg=}
     engines: {node: '>= 0.4.0'}
     dependencies:
+      passport-strategy: 1.0.0
+    dev: false
+
+  /passport-jwt/4.0.0:
+    resolution: {integrity: sha512-BwC0n2GP/1hMVjR4QpnvqA61TxenUMlmfNjYNgK0ZAs0HK4SOQkHcSv4L328blNTLtHq7DbmvyNJiH+bn6C5Mg==}
+    dependencies:
+      jsonwebtoken: 8.5.1
       passport-strategy: 1.0.0
     dev: false
 
